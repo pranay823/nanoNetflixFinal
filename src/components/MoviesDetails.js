@@ -26,7 +26,7 @@ const MoviesDetails = () => {
 
   if(!movieInfo || !Trailer ) return  <ShimmerUI />
   
- const { original_title,release_date , id} = movieInfo
+ const { original_title,release_date , id, adult , original_language} = movieInfo
 
 
 
@@ -42,7 +42,9 @@ const MoviesDetails = () => {
       <div className='w-full h-full flex justify-between '>
        <h1 className='text-offwhite text-6xl font-semibold  tracking-widest'>{original_title}</h1>
        <div className='mr-4 mt-3'>
-        <button className='px-4 py-2 bg-red-600 font-medium text-offwhite'>Release Date : {release_date}</button>
+       <button className='px-4 py-2 bg-red-600 font-medium text-white rounded-full'>{adult ? 'U': 'A'}</button>
+      <button className='px-4 py-2 bg-red-600 font-medium text-white ml-4 rounded-3xl'>{ original_language}</button>
+        <button className='px-4 py-2 bg-red-600 font-medium text-offwhite mx-4 rounded-3xl'>Release Date : {release_date}</button>
        </div>
       </div>
       <MovieDetailMainContainer movieInfo={movieInfo} trailer={Trailer}  />
