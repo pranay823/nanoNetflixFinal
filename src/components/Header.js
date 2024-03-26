@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 import { toggleGptsearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { toggleSearch } from "../utils/searchSlice";
 
 
 
@@ -42,6 +43,9 @@ const Header = ( ) =>{
   const hamburgerClickHandler =()=>{
   setopen(!open)
   }
+  const searchClickHandler=()=>{
+  dispatch(toggleSearch())
+  }
 
   const gptSearchHandler =()=>{
     dispatch(toggleGptsearchView())
@@ -66,6 +70,7 @@ const Header = ( ) =>{
         src={logo_url} alt="logo" >
         </img>
     { user && (<div>
+      
      <div onClick={hamburgerClickHandler} className="bg-red-700 absolute end-8 text-5xl top-9 z-40 md:hidden">
       <GiHamburgerMenu />
       </div>
@@ -73,6 +78,8 @@ const Header = ( ) =>{
      {showGptSearch && <select className="mb-2 md:mb-0 md:mr-2 p-2  " onChange={languageHandler}>
        {SupportedLanguages.map((lang)=> <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
       </select> }
+      <button onClick={searchClickHandler}
+      className=" text-offwhite font-bold p-2  bg-red-600 md:mr-2">Search</button>
       <button onClick={gptSearchHandler}
       className=" text-offwhite font-bold p-2  bg-red-600 md:mr-2">{showGptSearch?"Homepage":"GptSearch"}</button>
 

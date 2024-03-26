@@ -16,7 +16,6 @@ const useIndividualTrailerVideos = () => {
           );
           const json = await data.json();
           const Trailer = json.results?.filter((video) => video.type === "Trailer")[0];
-          console.log(Trailer)
           dispatch( addindividualMovieTrailer(Trailer));
     }
 

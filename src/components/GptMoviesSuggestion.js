@@ -5,7 +5,7 @@ import MoviesCard from '../components/MoviesCard'
 const GptMoviesSuggestion = () => {
   const {moviesNames , moviesResults} = useSelector((store) => store.gpt)
   if(!moviesResults) return ;
- console.log(moviesResults)
+
 
  
   return (

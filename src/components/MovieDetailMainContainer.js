@@ -3,7 +3,7 @@ import { ImgCDN_URL } from '../utils/constants'
 
 const MovieDetailMainContainer = ( {movieInfo,trailer}) => {
 
-    const { poster_path ,overview} = movieInfo
+    const { poster_path ,overview , popularity} = movieInfo
   return (
     <div className=' p-4 mt-4  flex  w-full   '>
     <img className='relative w-[20%] '
@@ -18,6 +18,7 @@ const MovieDetailMainContainer = ( {movieInfo,trailer}) => {
    <h2 className='text-5xl text-netred font-bold tracking-widest mb-2'>Overview</h2>
    <div className='h-2 w-[80%] bg-offwhite mb-4'></div>
    <p className='w-full text-offwhite pr-8'>{overview}</p>
+  <button className='px-4 py-2 bg-red-600 font-medium text-offwhite mt-4 rounded-3xl'>Popularity : {popularity}</button>
  </div>
  </div> 
   )

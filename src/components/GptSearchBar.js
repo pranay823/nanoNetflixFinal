@@ -5,6 +5,7 @@ import { gptMovies } from '../utils/gptSlice'
 import { lang } from '../utils/languageConstants'
 import { openai } from '../utils/openai'
 
+
 const GptSearchBar = () => {
   const langKey = useSelector(store => store.config.lang )
   const searchText = useRef(null);

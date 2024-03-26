@@ -3,6 +3,9 @@ import GptSearchBar from './GptSearchBar'
 import GptMoviesSuggestion from './GptMoviesSuggestion'
 import { login_background_img } from '../utils/constants'
 
+
+
+
 const GptSearch = () => {
   return (
     <div className=''>
@@ -15,5 +18,8 @@ const GptSearch = () => {
         </div>
   )
 }
+
+
+
 
 export default GptSearch
