@@ -7,8 +7,8 @@ const VideoTitle = ({title , overview}) => {
 
   return (
     <div className='bg-gradient-to-r  from-black  absolute w-screen aspect-video   '>
-    <div className='md:mt-64 mt-[60%] mx-4 w-1/4 px-2  text-white'>
-        <h1 className=' text-2xl md:text-6xl font-bold my-2 pb-2 md:pb-0'>{title}</h1>
+    <div className='md:mt-64 mt-[60%] mx-4 md:w-1/4  px-2  text-white'>
+        <h1 className=' text-xl sm:text-2xl md:text-6xl font-bold my-2 pb-2 md:pb-0'>{title}</h1>
         <p className='mb-2 hidden md:inline-block'>{overview}</p>
         <div  className='flex flex-row  '>
             <button className='px-6 pt-3  text-sm md:text-xl  bg-white rounded-md font-semibold mr-4  text-black hidden md:flex '>

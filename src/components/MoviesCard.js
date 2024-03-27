@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { ImgCDN_URL } from '../utils/constants'
 
+
 const MoviesCard = ({posterPath}) => {
   
   const showSearch = useSelector((store)=>store.search.showSearch)

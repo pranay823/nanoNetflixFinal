@@ -2,10 +2,11 @@ import React from 'react'
 import VideoTitle from '../components/VideoTitle'
 import { useSelector } from 'react-redux'
 import VideoBackground from './VideoBackground'
+import ShimmerUI from './ShimmerUI'
 
 const MainContainer = () => {
   const movies = useSelector(store=> store.movies?.nowPlayingMovies)
- if(movies == null) return 
+ if(movies == null) return <ShimmerUI />
 
    const mainMovie = movies[4]
   const {overview , original_title ,id} = mainMovie 
