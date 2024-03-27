@@ -21,6 +21,7 @@ const Header = ( ) =>{
     const user = useSelector((store)=>store.user)
     const showGptSearch = useSelector((store)=> store.gpt.showGptSearch)
     const [open , setopen]=useState(false)
+    const showSearch = useSelector((store)=>store.search?.showSearch)
 
     
 
@@ -79,7 +80,7 @@ const Header = ( ) =>{
        {SupportedLanguages.map((lang)=> <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}
       </select> }
       <button onClick={searchClickHandler}
-      className=" text-offwhite font-bold p-2  bg-red-600 md:mr-2">Search</button>
+      className=" text-offwhite font-bold p-2  bg-red-600 md:mr-2">{showSearch ? "HomePage":"Search"}</button>
       <button onClick={gptSearchHandler}
       className=" text-offwhite font-bold p-2  bg-red-600 md:mr-2">{showGptSearch?"Homepage":"GptSearch"}</button>
 

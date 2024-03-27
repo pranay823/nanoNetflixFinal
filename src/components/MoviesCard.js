@@ -1,13 +1,16 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { ImgCDN_URL } from '../utils/constants'
 
 const MoviesCard = ({posterPath}) => {
-  console.log(posterPath)
+  
+  const showSearch = useSelector((store)=>store.search.showSearch)
+
   if(!posterPath) return
-  console.log(posterPath)
+
 
   return (
-    <div className='md:w-48 w-28 p-2  '>
+    <div className={` p-2 ${showSearch ? "w-14 " : "w-28 md:w-48"} `}>
     <img  
      alt="pp" src={ImgCDN_URL+ posterPath}></img>
     </div>

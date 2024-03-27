@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { useSelector } from 'react-redux'
 import { login_background_img } from '../utils/constants'
 import {  searchMovieTMDBSearch } from '../utils/functions'
 import SearchSuggestion from './SearchSuggestion'
@@ -10,7 +11,7 @@ const Search = () => {
     const searchClickHandler = async()=>{
  const results = await searchMovieTMDBSearch(searchText?.current?.value)
    setmoviesResults(results)
-   console.log(results)
+  
   
 
     }
@@ -28,7 +29,7 @@ const Search = () => {
          className='py-2 px-4 bg-red-600 col-span-3 m-4'>Search</button>
       </form>
     </div >
-    <div className='flex flex-wrap '>
+    <div className='flex flex-col justify-center  mt-4 '>
     {moviesResults?.map((movie)=>{
     return <SearchSuggestion title={movie?.title} lang={movie?.original_language} poster_path={movie?.poster_path } />
     })}

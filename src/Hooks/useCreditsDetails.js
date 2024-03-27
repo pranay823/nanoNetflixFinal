@@ -18,9 +18,8 @@ const useCreditsDetails = (id) => {
 
 
     useEffect(()=>{
-
         getCreditsDetails()
-      },[])
+      },[id])
 
 }
 

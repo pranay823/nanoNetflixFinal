@@ -9,7 +9,7 @@ const useIndividualTrailerVideos = () => {
     const movieId = useSelector((store)=>store.movies?.movieDetails)
   
 
- const   getTrailer=async()=>{
+ const   getTrailer= async()=>{
         const data = await fetch(
             `https://api.themoviedb.org/3/movie/${movieId?.id}/videos?language=en-US`,
             Api_Options
@@ -21,7 +21,7 @@ const useIndividualTrailerVideos = () => {
 
     useEffect(()=>{
       getTrailer()
-    },[])
+    },[movieId])
     
 }
 

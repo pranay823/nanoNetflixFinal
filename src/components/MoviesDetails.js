@@ -41,11 +41,11 @@ const MoviesDetails = () => {
         src={logo_url} alt="logo" >
         </img>
         <button onClick={homepageClickHandler}
-         className=' bg-netred font-medium text-offwhite mx-4 my-8 px-4 '>Homepage</button>
+         className=' bg-netred font-medium text-offwhite mx-4 md:my-8 md:px-4 py-4 '>Homepage</button>
       </div>
-      <div className='w-full h-full flex justify-between '>
-       <h1 className='ml-4 text-offwhite text-6xl font-semibold  tracking-widest'>{original_title}</h1>
-       <div className='mr-4 mt-3'>
+      <div className='w-full h-full flex md:justify-between flex-col md:flex-row mt-4 '>
+       <h1 className='ml-4 text-offwhite md:text-6xl text-4xl sm:text-5xl  font-semibold tracking-widest text-center md:text-start'>{original_title}</h1>
+       <div className='mr-4 mt-3 text-center md:text-end'>
        <button className='px-4 py-2 bg-red-600 font-medium text-white rounded-full'>{adult ? 'U': 'A'}</button>
       <button className='px-4 py-2 bg-red-600 font-medium text-white ml-4 rounded-3xl'>{ original_language}</button>
         <button className='px-4 py-2 bg-red-600 font-medium text-offwhite mx-4 rounded-3xl'>Release Date : {release_date}</button>

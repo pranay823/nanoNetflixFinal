@@ -17,7 +17,7 @@ dispatch(addMovieReviews(json?.results))
 
 useEffect(()=>{
 getReviews()
-},[])
+},[id])
 }
 
 export default useReviews
